@@ -10,35 +10,37 @@ import HelpCentre from "./features/HelpCentre/pages/HelpCentre";
 import PrivacyAndSafety from "./features/PrivacyAndSafety/pages/PrivacyAndSafety";
 import Home from "./component/Home";
 import Features from "./features/Features/pages/Features";
+import { Errorpg } from "./features/Errorpg/pages/Errorpg"; // 👈 your error page
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // this is the main layout component
+    element: <Layout />,
+    errorElement: <Errorpg />, // 👈 will render if something throws an error
     children: [
       {
-        path: "", // this means "/"
-        element: <Home />, // this is the main component for the root path
+        index: true,
+        element: <Home />,
       },
       {
-        path: "/features", // "/about"
-        element: <Features />, // this is the main component for the "/about" path
+        path: "features",
+        element: <Features />,
       },
       {
-        path: "/fordevelopers", // "/contact"
-        element: <ForDevelopers />, // this is the main component for the "/contact" path
+        path: "fordevelopers",
+        element: <ForDevelopers />,
       },
       {
-        path: "/helpcentre", // "/FnQ"
-        element: <HelpCentre />, // this is the main component for the "/FnQ" path
+        path: "helpcentre",
+        element: <HelpCentre />,
       },
       {
-        path: "/privacyandsafety", // "/FnQ"
-        element: <PrivacyAndSafety />, // this is the main component for the "/FnQ" path
+        path: "privacyandsafety",
+        element: <PrivacyAndSafety />,
       },
       {
-        path: "/desktopapp", // "/FnQ"
-        element: <DesktopApp />, // this is the main component for the "/FnQ" path
+        path: "desktopapp",
+        element: <DesktopApp />,
       },
     ],
   },

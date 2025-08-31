@@ -1,7 +1,7 @@
 import React from "react";
 
 const ForDevelopers = () => {
-  return <div>ForDevelopers</div>;
+  return <div>For Developers</div>;
 };
 
 export default ForDevelopers;

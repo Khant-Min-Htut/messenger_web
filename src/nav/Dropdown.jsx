@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaFacebookMessenger } from "react-icons/fa";
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,11 +9,8 @@ const Dropdown = () => {
     <nav className="bg-white shadow-md p-4">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <Link to="/">
-          <img
-            src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.8562-6/475210330_598195142840489_9172482348551739153_n.png?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=GB4IGbdnYx0Q7kNvwFzyf36&_nc_oc=AdlW3F12zmSZG1WWMqUxMc8DHoV8ZiMNqZqslONfpnjr5b-RBZIIzGh-vqdvHfYEmn8&_nc_zt=14&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=44BbWUjs_NMy_OzS1rDUqQ&oh=00_AfGUEPUyucVLQV1irCkANlR57v_3my1ZG-1JjOG7g9dTcQ&oe=68191CD8"
-            className="w-11"
-            href="/features"
-          />
+          <FaFacebookMessenger className="text-blue-500 w-11 h-10" />
+          <img className="w-11" href="/features" />
         </Link>
 
         {/* Hamburger Button */}
@@ -47,27 +45,30 @@ const Dropdown = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="/features" className="hover:text-blue-500">
+            <a href="/features" className="hover:text-blue-500 font-bold">
               Features
             </a>
           </li>
           <li>
-            <a href="/privacyandsafety" className="block hover:text-blue-500">
+            <a
+              href="/privacyandsafety"
+              className="block hover:text-blue-500 font-bold"
+            >
               Privacy and Safety
             </a>
           </li>
           <li>
-            <a href="/desktopapp" className="hover:text-blue-500">
+            <a href="/desktopapp" className="hover:text-blue-500 font-bold">
               Desktop App
             </a>
           </li>
           <li>
-            <a href="/fordevelopers" className="hover:text-blue-500">
-              Fordevelopers
+            <a href="/fordevelopers" className="hover:text-blue-500 font-bold">
+              For Developers
             </a>
           </li>
           <li>
-            <a href="/helpcentre" className="hover:text-blue-500">
+            <a href="/helpcentre" className="hover:text-blue-500 font-bold">
               Help Centre
             </a>
           </li>
