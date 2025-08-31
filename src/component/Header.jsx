@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
+import Dropdown from "../nav/Dropdown";
 
 function Header() {
+  const colors = ["Red", "Green", "Blue"];
+
   return (
-    <nav>
-      <NavLink to="/">Home</NavLink> |<NavLink to="/about">About</NavLink> |
-      <NavLink to="/FnQ">FnQ</NavLink> |{" "}
-      <NavLink to="/contact">Contact</NavLink>
-    </nav>
+    <>
+      <Dropdown />
+    </>
   );
-}
+} // return (
 
 export default Header;

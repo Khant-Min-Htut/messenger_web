@@ -1,32 +1,44 @@
 // src/Router.jsx
 
 import { createBrowserRouter } from "react-router-dom";
+
+import Layout from "./component/Layout";
 import App from "./App";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import FnQ from "./pages/FnQ";
+import DesktopApp from "./features/DesktopApp/pages/DesktopApp";
+import ForDevelopers from "./features/ForDevelopers/pages/ForDevelopers";
+import HelpCentre from "./features/HelpCentre/pages/HelpCentre";
+import PrivacyAndSafety from "./features/PrivacyAndSafety/pages/PrivacyAndSafety";
+import Home from "./component/Home";
+import Features from "./features/Features/pages/Features";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />, // this is the main layout component
     children: [
       {
         path: "", // this means "/"
-        element: <Home />,
+        element: <Home />, // this is the main component for the root path
       },
       {
-        path: "about", // "/about"
-        element: <About />,
+        path: "/features", // "/about"
+        element: <Features />, // this is the main component for the "/about" path
       },
       {
-        path: "contact", // "/contact"
-        element: <Contact />,
+        path: "/fordevelopers", // "/contact"
+        element: <ForDevelopers />, // this is the main component for the "/contact" path
       },
       {
-        path: "FnQ", // "/FnQ"
-        element: <FnQ />,
+        path: "/helpcentre", // "/FnQ"
+        element: <HelpCentre />, // this is the main component for the "/FnQ" path
+      },
+      {
+        path: "/privacyandsafety", // "/FnQ"
+        element: <PrivacyAndSafety />, // this is the main component for the "/FnQ" path
+      },
+      {
+        path: "/desktopapp", // "/FnQ"
+        element: <DesktopApp />, // this is the main component for the "/FnQ" path
       },
     ],
   },
